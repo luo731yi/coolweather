@@ -94,10 +94,10 @@ public class ChooseAreaFragment extends Fragment{
     }
 
     /**
-     * æŸ¥è¯¢æ‰€æœ‰çœä»½ï¼Œä¼˜å…ˆæŸ¥æ•°æ®åº“ï¼Œæ²¡æœ‰åˆ™åœ¨æœåŠ¡å™¨ä¸ŠæŸ¥è¯¢
+     * ²éÑ¯ËùÓĞÊ¡·İ£¬ÓÅÏÈ²éÊı¾İ¿â£¬Ã»ÓĞÔòÔÚ·şÎñÆ÷ÉÏ²éÑ¯
      */
     private void queryProvince(){
-        titleView.setText("China");
+        titleView.setText("ÖĞ¹ú");
         backButton.setVisibility(View.GONE);
         provinceList = DataSupport.findAll(Province.class);
         if (provinceList.size() > 0){
@@ -115,7 +115,7 @@ public class ChooseAreaFragment extends Fragment{
     }
 
     /**
-     * æŸ¥è¯¢é€‰ä¸­çœä»½æ‰€æœ‰çš„åŸå¸‚
+     * ²éÑ¯Ñ¡ÖĞÊ¡·İËùÓĞµÄ³ÇÊĞ
      */
     private void queryCity(){
         titleView.setText(selectProvince.getProvinceName());
@@ -136,7 +136,7 @@ public class ChooseAreaFragment extends Fragment{
     }
 
     /**
-     * æŸ¥è¯¢é€‰ä¸­åŸå¸‚æ‰€æœ‰çš„å¿
+     * ²éÑ¯Ñ¡ÖĞ³ÇÊĞËùÓĞµÄÏØ
      */
     private void queryCounty(){
         titleView.setText(selectCity.getCityName());
@@ -157,7 +157,7 @@ public class ChooseAreaFragment extends Fragment{
         }
     }
     /**
-     * æ ¹æ®ä¼ å…¥çš„åœ°å€ï¼Œåœ¨æœåŠ¡å™¨ä¸ŠæŸ¥è¯¢æ•°æ®
+     * ¸ù¾İ´«ÈëµÄµØÖ·£¬ÔÚ·şÎñÆ÷ÉÏ²éÑ¯Êı¾İ
      * @param address
      * @param type
      */
@@ -171,7 +171,7 @@ public class ChooseAreaFragment extends Fragment{
                     @Override
                     public void run() {
                         closeProgressDialog();
-                        Toast.makeText(getContext(),"åŠ è½½å¤±è´¥",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(),"¼ÓÔØÊ§°Ü",Toast.LENGTH_SHORT).show();
                     }
                 });
             }
@@ -206,18 +206,18 @@ public class ChooseAreaFragment extends Fragment{
         });
     }
     /**
-     * æ˜¾ç¤ºè¿›åº¦å¯¹è¯æ¡†
+     * ÏÔÊ¾½ø¶È¶Ô»°¿ò
      */
     private void showProgressDialog(){
         if (progressDialog == null){
             progressDialog = new ProgressDialog(getActivity());
-            progressDialog.setMessage("æ­£åœ¨åŠ è½½ã€‚ã€‚ã€‚");
+            progressDialog.setMessage("ÕıÔÚ¼ÓÔØ¡£¡£¡£");
             progressDialog.setCanceledOnTouchOutside(false);
         }
         progressDialog.show();
     }
     /**
-     * å…³é—­è¿›åº¦å¯¹è¯æ¡†
+     * ¹Ø±Õ½ø¶È¶Ô»°¿ò
      */
     private void closeProgressDialog(){
         if (progressDialog != null){
