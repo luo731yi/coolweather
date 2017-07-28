@@ -97,7 +97,7 @@ public class ChooseAreaFragment extends Fragment{
      * 查询所有省份，优先查数据库，没有则在服务器上查询
      */
     private void queryProvince(){
-        titleView.setText("中国");
+        titleView.setText("China");
         backButton.setVisibility(View.GONE);
         provinceList = DataSupport.findAll(Province.class);
         if (provinceList.size() > 0){

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\AndroidStudioProjects\coolweather\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.1\jars\classes.jar"
+        revision="24.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="D:\AndroidStudioProjects\coolweather\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-f8817af45a51a95e53eaa8c4447ad6f35ff3b74d.jar" />
+    </item>
+    <item
+        jar="D:\AndroidStudioProjects\coolweather\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.1\jars\classes.jar"
+        revision="24.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="D:\AndroidStudioProjects\coolweather\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-48c23cca5fcbc503f96147215af7ca0257df0c7b.jar" />
+    </item>
+    <item
+        jar="C:\Users\hongpeng\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.4.1\c7c4f9e35c2fd5900da24f9872e3971801f08ce0\okhttp-3.4.1.jar"
+        revision="24.0.2"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="D:\AndroidStudioProjects\coolweather\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\okhttp-3.4.1-736f5fec34088f6f3ca604db11a32bf5614d905f.jar" />
+    </item>
+    <item
+        jar="C:\Users\hongpeng\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
+        revision="24.0.2"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="D:\AndroidStudioProjects\coolweather\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\gson-2.7-fb043fb1e6d546623962adc5580ec929b97bf036.jar" />
+    </item>
+    <item
+        jar="D:\Android\sdk\platforms\android-25\optional\org.apache.http.legacy.jar"
+        revision="24.0.2"
+        sha1="5f0541a4298daa0590b22cfbde43f85e2a675545">
+        <dex dex="D:\AndroidStudioProjects\coolweather\app\build\intermediates\transforms\preJackRuntimeLibraries\debug\jars\8000\40\org.apache.http.legacy-42fb61f3f6bdc1bd50c6d813150a70143a841fa8.jar" />
+    </item>
+    <item
+        jar="C:\Users\hongpeng\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.9.0\f824591a0016efbaeddb8300bee54832a1398cfa\okio-1.9.0.jar"
+        revision="24.0.2"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="D:\AndroidStudioProjects\coolweather\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\okio-1.9.0-131fb163f95d830e29c95648b860f3559569be40.jar" />
+    </item>
+    <item
+        jar="D:\AndroidStudioProjects\coolweather\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.1\jars\classes.jar"
+        revision="24.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="D:\AndroidStudioProjects\coolweather\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-83584327e94ee92ff870a669060df47d68d2054b.jar" />
+    </item>
+    <item
+        jar="C:\Users\hongpeng\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
+        revision="24.0.2"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="D:\AndroidStudioProjects\coolweather\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\glide-3.7.0-fef981c3003656f7068ef5306f290dc4c2807980.jar" />
+    </item>
+    <item
+        jar="D:\AndroidStudioProjects\coolweather\app\build\intermediates\exploded-aar\org.litepal.android\core\1.3.2\jars\classes.jar"
+        revision="24.0.2"
+        sha1="9a24b1b000b211eabfa13b5834c059818bc98fd5">
+        <dex dex="D:\AndroidStudioProjects\coolweather\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-1a041833a962f64d558939ee92b2e4fe896bfc35.jar" />
+    </item>
+    <item
+        jar="D:\AndroidStudioProjects\coolweather\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\jars\classes.jar"
+        revision="24.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="D:\AndroidStudioProjects\coolweather\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-d2feb6553a8d0b66374e45cd766dd08ed30254a1.jar" />
+    </item>
+    <item
+        jar="D:\AndroidStudioProjects\coolweather\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.1\jars\classes.jar"
+        revision="24.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="D:\AndroidStudioProjects\coolweather\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-a67f135f6414aca33e0a633a6740b4d24a261d9e.jar" />
+    </item>
+    <item
+        jar="D:\Android\sdk\platforms\android-25\android.jar"
+        revision="24.0.2"
+        sha1="712a0312fe844a21a1b3812fa960c363a1578984">
+        <dex dex="D:\AndroidStudioProjects\coolweather\app\build\intermediates\transforms\preJackRuntimeLibraries\debug\jars\8000\40\android-ce7661520c3da8e0b04fc492cb363f96ac7248b6.jar" />
+    </item>
+    <item
+        jar="D:\AndroidStudioProjects\coolweather\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\jars\classes.jar"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\AndroidStudioProjects\coolweather\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-db95a526814732395e6fe43a768d8399a694eab3.jar" />
+    </item>
+    <item
+        jar="D:\AndroidStudioProjects\coolweather\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.1\jars\classes.jar"
+        revision="24.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="D:\AndroidStudioProjects\coolweather\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-bb80ffbb0a99d2f0bce2732a60671f891e3a19cb.jar" />
+    </item>
+    <item
+        jar="D:\AndroidStudioProjects\coolweather\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.1\jars\classes.jar"
+        revision="24.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="D:\AndroidStudioProjects\coolweather\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-c02d4f6e3f429bca075add7aecfe8351638ccdb8.jar" />
+    </item>
+    <item
+        jar="D:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        revision="24.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="D:\AndroidStudioProjects\coolweather\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\support-annotations-25.3.1-4587515df70b11ae990e217c69c9b3a61733a049.jar" />
+    </item>
+    <item
+        jar="D:\AndroidStudioProjects\coolweather\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\jars\classes.jar"
+        revision="24.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="D:\AndroidStudioProjects\coolweather\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-c555483ecf96bc4b662d299ddf5b38f57da56dfa.jar" />
+    </item>
+
+</items>
