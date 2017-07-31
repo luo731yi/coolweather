@@ -17,17 +17,18 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
+        android:textColor="#fff"
         android:layout_gravity="center_vertical"/>
     <TextView
-        android:id="@+id/max_text"
+        android:id="@+id/max_txt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:layout_gravity="center"
         android:gravity="right"
+        android:layout_gravity="center"
         android:textColor="#fff"/>
     <TextView
-        android:id="@+id/min_text"
+        android:id="@+id/min_txt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"

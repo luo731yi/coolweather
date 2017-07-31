@@ -66,7 +66,7 @@ public class WeatherActivity extends AppCompatActivity {
         }
     }
     /**
-     *æ ¹æ®å¤©æ°”IDè¯·æ±‚åŸå¸‚å¤©æ°”ä¿¡æ¯
+     *¸ù¾İÌìÆøIDÇëÇó³ÇÊĞÌìÆøĞÅÏ¢
      */
     public void requestWeather(String weatherId){
         String weatherUrl = "http://guolin.tech/api/weather?cityid="+weatherId+
@@ -77,7 +77,7 @@ public class WeatherActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(WeatherActivity.this,"è·å–å¤©æ°”å¤±è´¥",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(WeatherActivity.this,"»ñÈ¡ÌìÆøÊ§°Ü",Toast.LENGTH_SHORT).show();
                     }
                 });
             }
@@ -96,7 +96,7 @@ public class WeatherActivity extends AppCompatActivity {
                             editor.apply();
                             shareWeatherInfo(weather);
                         }else {
-                            Toast.makeText(WeatherActivity.this,"è·å–å¤©æ°”ä¿¡æ¯å¤±è´¥",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(WeatherActivity.this,"»ñÈ¡ÌìÆøĞÅÏ¢Ê§°Ü",Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -105,13 +105,13 @@ public class WeatherActivity extends AppCompatActivity {
     }
 
     /**
-     * å¤„ç†weatherå®ä½“ç±»ä¸­çš„æ•°æ®
+     * ´¦ÀíweatherÊµÌåÀàÖĞµÄÊı¾İ
      * @param weather
      */
     public void shareWeatherInfo(Weather weather){
         String cityName = weather.basic.CityName;
         String updateTime = weather.basic.update.updateTime.split(" ")[1];
-        String degree = weather.now.tenmperature+"â„ƒ";
+        String degree = weather.now.tenmperature+"¡æ";
         String weatherInfo = weather.now.more.info;
         titleCity.setText(cityName);
         titleUpdateTime.setText(updateTime);
@@ -120,24 +120,23 @@ public class WeatherActivity extends AppCompatActivity {
         forecastLayout.removeAllViews();
         for (Forecast forecast:weather.forecastList){
             View view = LayoutInflater.from(this).inflate(R.layout.forecast_item,forecastLayout,false);
-            TextView dateText = (TextView) findViewById(R.id.date_text);
-            TextView infoText = (TextView) findViewById(R.id.info_text);
-            TextView maxText = (TextView) findViewById(R.id.max_text);
-            TextView minText = (TextView) findViewById(R.id.min_text);
+            TextView dateText = (TextView) view.findViewById(R.id.date_text);
+            TextView infoText = (TextView) view.findViewById(R.id.info_text);
+            TextView max_txt = (TextView) view.findViewById(R.id.max_txt);
+            TextView min_txt = (TextView) view.findViewById(R.id.min_txt);
             dateText.setText(forecast.date);
             infoText.setText(forecast.more.info);
-            maxText.setText(forecast.tenmperature.max);
-            minText.setText(forecast.tenmperature.min);
+            max_txt.setText(forecast.temperature.max);
+            min_txt.setText(forecast.temperature.min);
             forecastLayout.addView(view);
         }
         if (weather.aqi != null){
             aqiText.setText(weather.aqi.city.aqi);
             pm25Text.setText(weather.aqi.city.pm25);
         }
-        Log.d("æµ‹è¯•ï¼š", "shareWeatherInfo: ");
-        String comfort = "èˆ’é€‚åº¦ï¼š"+weather.suggestion.comfort.info;
-        String carWash = "æ´—è½¦æŒ‡æ•°ï¼š"+weather.suggestion.carWash.info;
-        String sport = "è¿åŠ¨å»ºè®®ï¼š"+weather.suggestion.sport.info;
+        String comfort = "ÊæÊÊ¶È£º"+weather.suggestion.comfort.info;
+        String carWash = "Ï´³µÖ¸Êı£º"+weather.suggestion.carWash.info;
+        String sport = "ÔË¶¯½¨Òé£º"+weather.suggestion.sport.info;
         comfotText.setText(comfort);
         carWashText.setText(carWash);
         sportText.setText(sport);
