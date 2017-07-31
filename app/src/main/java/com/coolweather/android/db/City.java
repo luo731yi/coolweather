@@ -9,14 +9,14 @@ import org.litepal.crud.DataSupport;
 public class City extends DataSupport {
     private int id;//市ID
     private String cityName;//市名
-    private String cityCode;//市代号
-    private int privinceId;//所属省ID
+    private int cityCode;//市代号
+    private int provinceId;//所属省ID
 
-    public String getCityCode() {
+    public int getCityCode() {
         return cityCode;
     }
 
-    public void setCityCode(String cityCode) {
+    public void setCityCode(int cityCode) {
         this.cityCode = cityCode;
     }
 
@@ -36,11 +36,11 @@ public class City extends DataSupport {
         this.id = id;
     }
 
-    public int getPrivinceId() {
-        return privinceId;
+    public int getProvinceId() {
+        return provinceId;
     }
 
-    public void setPrivinceId(int privinceId) {
-        this.privinceId = privinceId;
+    public void setProvinceId(int provinceId) {
+        this.provinceId = provinceId;
     }
 }

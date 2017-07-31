@@ -23,14 +23,13 @@ public class Utility {
                     JSONObject jsonObject = allProvinces.getJSONObject(i);
                     Province province = new Province();
                     province.setProvinceName(jsonObject.getString("name"));
-                    province.setProvinceCode(jsonObject.getString("id"));
+                    province.setProvinceCode(jsonObject.getInt("id"));
                     province.save();
                 }
                 return true;
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-
         }
         return false;
     }
@@ -42,8 +41,8 @@ public class Utility {
                     JSONObject jsonObject = jsonArray.getJSONObject(i);
                     City city = new City();
                     city.setCityName(jsonObject.getString("name"));
-                    city.setCityCode(jsonObject.getString("id"));
-                    city.setPrivinceId(provinceId);
+                    city.setCityCode(jsonObject.getInt("id"));
+                    city.setProvinceId(provinceId);
                     city.save();
                 }
                 return true;

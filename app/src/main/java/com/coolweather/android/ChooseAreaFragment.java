@@ -1,11 +1,9 @@
 package com.coolweather.android;
-
-import android.annotation.TargetApi;
 import android.app.Fragment;
 import android.app.ProgressDialog;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,9 +35,9 @@ import okhttp3.Response;
  */
 
 public class ChooseAreaFragment extends Fragment{
-    private static final int LEVEL_PTOVINCE = 0;
-    private static final int LEVEL_CITY = 1;
-    private static final int LEVEL_COUNTY= 2;
+    public static final int LEVEL_PTOVINCE = 0;
+    public static final int LEVEL_CITY = 1;
+    public static final int LEVEL_COUNTY= 2;
     private ProgressDialog progressDialog;
     private TextView titleView;
     private Button backButton;
@@ -53,7 +51,6 @@ public class ChooseAreaFragment extends Fragment{
     private City selectCity;
     private int currentLevel;
 
-    @TargetApi(Build.VERSION_CODES.M)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.choose_area,container,false);
@@ -94,7 +91,7 @@ public class ChooseAreaFragment extends Fragment{
     }
 
     /**
-     * 查询所有省份，优先查数据库，没有则在服务器上查询
+     * ?????????????????????????????????????
      */
     private void queryProvince(){
         titleView.setText("中国");
@@ -110,12 +107,12 @@ public class ChooseAreaFragment extends Fragment{
             currentLevel = LEVEL_PTOVINCE;
         } else {
             String address = "http://guolin.tech/api/china";
-            queryFromServer(address,"province");
+            this.queryFromServer(address,"province");
         }
     }
 
     /**
-     * 查询选中省份所有的城市
+     * ??????????????????
      */
     private void queryCity(){
         titleView.setText(selectProvince.getProvinceName());
@@ -130,13 +127,13 @@ public class ChooseAreaFragment extends Fragment{
             listView.setSelection(0);
             currentLevel = LEVEL_CITY;
         }else {
-            String address = "http://guolin.tech/api/china"+selectProvince.getId();
-            queryFromServer(address,"city");
+            String address = "http://guolin.tech/api/china/"+selectProvince.getProvinceCode();
+            this.queryFromServer(address,"city");
         }
     }
 
     /**
-     * 查询选中城市所有的县
+     * ??????????????????
      */
     private void queryCounty(){
         titleView.setText(selectCity.getCityName());
@@ -152,33 +149,22 @@ public class ChooseAreaFragment extends Fragment{
             listView.setSelection(0);
             currentLevel = LEVEL_COUNTY;
         }else {
-            String address = "http://guolin.tech/api/china"+selectProvince.getId()+"/"+selectCity.getId();
-            queryFromServer(address,"county");
+            String address = "http://guolin.tech/api/china/"+selectProvince.getProvinceCode()+"/"+selectCity.getCityCode();
+            this.queryFromServer(address,"county");
         }
     }
     /**
-     * 根据传入的地址，在服务器上查询数据
+     * ???????????????????????????
      * @param address
      * @param type
      */
-    private void queryFromServer(String address,final String type){
+    private void queryFromServer(String address,String type){
         showProgressDialog();
         HttpUtil.sendOkHttpRequest(address, new Callback() {
             @Override
-            public void onFailure(Call call, IOException e) {
-                getActivity().runOnUiThread(new Runnable() {
-                    @TargetApi(Build.VERSION_CODES.M)
-                    @Override
-                    public void run() {
-                        closeProgressDialog();
-                        Toast.makeText(getContext(),"加载失败",Toast.LENGTH_SHORT).show();
-                    }
-                });
-            }
-
-            @Override
             public void onResponse(Call call, Response response) throws IOException {
-                String responseText = response.body().toString();
+                String responseText = response.body().string();
+                Log.d("测试：", responseText);
                 boolean result = false;
                 if ("province".equals(type)){
                     result = Utility.handleProvinceResponse(responseText);
@@ -203,10 +189,20 @@ public class ChooseAreaFragment extends Fragment{
                     });
                 }
             }
+            @Override
+            public void onFailure(Call call, IOException e) {
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        closeProgressDialog();
+                        Toast.makeText(getContext(),"加载失败",Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
         });
     }
     /**
-     * 显示进度对话框
+     * ???????????
      */
     private void showProgressDialog(){
         if (progressDialog == null){
@@ -217,7 +213,7 @@ public class ChooseAreaFragment extends Fragment{
         progressDialog.show();
     }
     /**
-     * 关闭进度对话框
+     * ??????????
      */
     private void closeProgressDialog(){
         if (progressDialog != null){
