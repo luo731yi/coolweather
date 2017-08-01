@@ -51,7 +51,7 @@ public class ChooseAreaFragment extends Fragment{
     private Province selectProvince;
     private City selectCity;
     private int currentLevel;
-
+    public static String weatherId;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.choose_area,container,false);
@@ -76,11 +76,18 @@ public class ChooseAreaFragment extends Fragment{
                     selectCity = cityList.get(i);
                     queryCounty();
                 } else if (currentLevel == LEVEL_COUNTY){
-                    String weatherId = countyList.get(i).getWeatherId();
-                    Intent intent = new Intent(getActivity(),WeatherActivity.class);
-                    intent.putExtra("weather_id",weatherId);
-                    startActivity(intent);
-                    getActivity().finish();
+                    weatherId = countyList.get(i).getWeatherId();
+                    if (getActivity() instanceof MainActivity){
+                        Intent intent = new Intent(getActivity(),WeatherActivity.class);
+                        intent.putExtra("weather_id",weatherId);
+                        startActivity(intent);
+                        getActivity().finish();
+                    }else if (getActivity() instanceof WeatherActivity){
+                        WeatherActivity activity = (WeatherActivity) getActivity();
+                        activity.drawerLayout.closeDrawers();
+                        activity.swipeRefresh.setRefreshing(false);
+                        activity.requestWeather(weatherId);
+                    }
                 }
             }
         });
